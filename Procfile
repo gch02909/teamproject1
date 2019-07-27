@@ -1,0 +1,1 @@
+web: gunicorn jry.wsgi --log-file -
