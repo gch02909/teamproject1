@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block contents %}
+	<!--================ start banner Area =================-->
+	<style>
+		.text-white {font-family: 'yg-jalnan';}
+		p {
+			font-family: 'Hanna';
+			letter-spacing: 3px;
+		}
+	</style>
+	<section class="banner-area relative">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row justify-content-lg-end align-items-center banner-content">
+				<div class="col-lg-6">
+					<h1 class="text-white">ㅈㄹㅇ</h1>
+					<p>신촌 PC방의 잔여좌석을 확인하거나 대관을 할 수 있는 서비스입니다</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div id="map" style="width:1000px; height:600px; border: 1px solid #bcbcbc; margin:auto;"></div>
+	<!--================ End banner Area =================-->
+{% endblock %}

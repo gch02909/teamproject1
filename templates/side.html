@@ -1,0 +1,291 @@
+					<!-- 퀵메뉴 시작 -->
+<div>
+    <script>
+        function isGameSearch1Enter()
+        {
+             if(window.event.keyCode == 13)
+                OnSearchGame1();
+        }
+    
+        function OnSearchGame1()
+        {
+            var ostr	= getIdVars('input','gamesearch1');
+            var str		= jsTrim(ostr);
+    
+            if(str == "")
+            {
+                $('#quick_search1').hide();
+                return;
+            }
+    
+            var urls	= "/updator/getquickgame.php";
+            var datas	= {'searchStr' : str};
+            $('#quick_search1').load(urls, datas);
+            $('#quick_search1').show();
+        }
+    </script>
+    <!-- S : Quick Contents -->
+    <div id="hg_BlockR" style="margin:1px 2px 0 0;">
+        <div>
+            <iframe style="visibility:hidden;" onload="this.style.visibility = 'visible';" src="/banner/banner_3.php"  width="120" height="190" frameborder="0" hspace="0" allowtransparency="true"  scrolling="no"></iframe>
+        </div>
+        <!-- S : 즐겨찾기 -->
+        <div class="bookmark">
+            <li><img src="http://appdata.hungryapp.co.kr/images/main1404/common/tx_bookmark.jpg" /></li>
+            <ul class="bookmarkCell">
+    <li>즐겨찾기 없음</li>		</ul>
+            <div class="bookPlus"><a href="javascript:pop_favorite()" class="bbsmore"><img src="http://appdata.hungryapp.co.kr/images/main1404/common/btn_bookmark.jpg" alt="내 즐겨찾기 관리" title="내 즐겨찾기 관리" /></a></div>
+        </div>
+        <!-- E : 즐겨찾기 -->
+    
+        <!-- S : 추천퀵링크 -->
+        <div class="RightQiuck">
+            <li><img src="http://appdata.hungryapp.co.kr/images/main1404/common/tx_recom.jpg" alt="추천퀵링크" title="추천퀵링크" /></li>
+            <ul class="QuickCell">
+    
+                    <li onClick='location.href="/bbs/list.php?bcode=jianhun"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_jianhun.png/hungryapp/resize/21x21' alt='검혼' width='21px' height='21px' onerror='noimage(this)' />
+                        검혼
+                    </li>
+                
+                    <li onClick='location.href="/bbs/list.php?bcode=nanagc"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_nanagc.png/hungryapp/resize/21x21' alt='일곱 개의 대죄: GRAND CROSS' width='21px' height='21px' onerror='noimage(this)' />
+                        일곱 개의 대죄: GRAND CROSS
+                    </li>
+                
+                    <li onClick='location.href="/bbs/list.php?bcode=kingofallstar"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_kingofallstar.png/hungryapp/resize/21x21' alt='킹 오브 파이터 올스타' width='21px' height='21px' onerror='noimage(this)' />
+                        킹 오브 파이터 올스타
+                    </li>
+                
+                    <li onClick='location.href="/bbs/list.php?bcode=soulworkerzero"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_soulworkerzero.png/hungryapp/resize/21x21' alt='소울워커ZERO' width='21px' height='21px' onerror='noimage(this)' />
+                        소울워커ZERO
+                    </li>
+                
+                    <li onClick='location.href="/bbs/list.php?bcode=btsw"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_btsw.png/hungryapp/resize/21x21' alt='BTS WORLD' width='21px' height='21px' onerror='noimage(this)' />
+                        BTS WORLD
+                    </li>
+                
+                    <li onClick='location.href="/bbs/list.php?bcode=tenka_zan"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_tenka_zan.png/hungryapp/resize/21x21' alt='천화백검-참-' width='21px' height='21px' onerror='noimage(this)' />
+                        천화백검-참-
+                    </li>
+                
+                    <li onClick='location.href="/bbs/list.php?bcode=tgsw"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_tgsw.png/hungryapp/resize/21x21' alt='태고신왕' width='21px' height='21px' onerror='noimage(this)' />
+                        태고신왕
+                    </li>
+                
+                    <li onClick='location.href="/bbs/list.php?bcode=miramemo"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_miramemo.png/hungryapp/resize/21x21' alt='미라쥬 메모리얼' width='21px' height='21px' onerror='noimage(this)' />
+                        미라쥬 메모리얼
+                    </li>
+                
+                    <li onClick='location.href="/bbs/list.php?bcode=wuxingjianm"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_wuxingjianm.png/hungryapp/resize/21x21' alt='무형검M' width='21px' height='21px' onerror='noimage(this)' />
+                        무형검M
+                    </li>
+                
+                    <li onClick='location.href="/bbs/list.php?bcode=herogodsword"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_herogodsword.png/hungryapp/resize/21x21' alt='영웅신검' width='21px' height='21px' onerror='noimage(this)' />
+                        영웅신검
+                    </li>
+                
+                    <li onClick='location.href="/bbs/list.php?bcode=lobluemoon"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_lobluemoon.png/hungryapp/resize/21x21' alt='레전드 오브 블루문' width='21px' height='21px' onerror='noimage(this)' />
+                        레전드 오브 블루문
+                    </li>
+                
+                    <li onClick='location.href="/bbs/list.php?bcode=princeredive"' style='white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;'>
+                        <img src='http://appdata.hungryapp.co.kr/images/common/thum_princeredive.png/hungryapp/resize/21x21' alt='프린세스 커넥트! Re:Dive' width='21px' height='21px' onerror='noimage(this)' />
+                        프린세스 커넥트! Re:Dive
+                    </li>
+                        </ul>
+        </div>
+        <!-- E : 추천퀵링크 -->
+    
+        <div class="RightBnr">
+            <iframe style="visibility:hidden;" onload="this.style.visibility = 'visible';" src="/banner/banner_6.php"  width="120" height="930" frameborder="0" hspace="0" allowtransparency="true"  scrolling="no"></iframe>
+                </div>
+    
+            <!--S : 쇼핑 , 경품 상품-->
+        <div style="clear:right;float:right;margin-top:5px;">
+                <style type="text/css">
+                .rb_thumA{ width:65%;}
+                .rb_thumB{ width:21px;}
+                .rb_icon_new   { position:absolute; border:0; left:0 ; display:none;}
+                .rb_icon_new_on{ position:absolute; bottom:0; left:0; }
+                .rb_iconA{ float:right; margin-top:2px;}
+    
+                .rb_c1{ color:#444444; font-weight:bold; text-align:center; line-height:100%; margin-top:3px; }
+                .rb_c2{ font:'Arial Black',Arial,Verdana,Tahoma; color:#d40000; font-weight:bold; }
+                .rb_c3{ color:#666666; margin-left:3px; font-weight:normal;}
+                .rb_c4{ color:#444444; float:left; margin-left:2px; width:55px; overflow:hidden; }
+    
+                .rb_wrapper{ width:120px; letter-spacing:-1px; font-size:12px;} 
+                .rb_gift_mid{ border:#1795e6 3px solid; border-top:0;}
+                .rb_gift_el{ padding:3px 0 6px 0; border-bottom:#c6c6c6 dotted 1px; width:90%;}
+                .rb_gift_el_L{ padding:3px 0 6px 0; border-bottom:#c6c6c6 dotted 1px;}
+    
+                .rb_shop_mid{ border:#e64f4f 3px solid; border-top:0;}
+                .rb_shop_el{ padding:3px 0 6px 0; border-bottom:#c6c6c6 dotted 1px; width:90%;}
+                .rb_shop_el_L{ padding:3px 0 6px 0; border-bottom:#c6c6c6 dotted 1px;}
+    
+                .rb_cp_mid{ border:#9a581b 3px solid; border-top:0; text-align:left; padding-top:3px;}
+                .rb_cp_el{ padding:3px 0 6px 0; border-bottom:#c6c6c6 dotted 1px; width:90%; margin-left:5%; position:relative; height:18px;}
+                .rb_cp_el_L{ padding:3px 0 6px 0; border-bottom:#c6c6c6 dotted 1px;}
+                .rb_cp_thum{ position:relative; float:left;}
+    
+                .clear_both{ clear:both;}
+    
+                .rb_thumB{ width:21px; border:#a890bd 1px solid;}
+                .rb_c4{ color:#444444; float:left; margin-left:2px; width:54px; overflow:hidden; letter-spacing:-1.5px; overflow:hidden; }
+                .rb_iconA{ float:left; margin-top:2px; margin-left:2px;}
+                .rb_join_mid{ border:#9963c6 3px solid; border-top:0; text-align:left; padding-top:3px; background:#f8efff;}
+                .rb_join_el{   padding:3px 0 6px 0; border-bottom:#c6c6c6 dotted 1px; width:95%; margin-left:2.5%; position:relative; height:18px;}
+                .rb_join_el_L{ padding:3px 0 6px 0; width:95%; margin-left:2.5%; position:relative; height:18px;  }
+                .rb_join_thum{ position:relative; float:left;}
+    
+                </style> 
+                <div class="rb_wrapper" align="center">
+                        <div class="rb_gift_tt"><img src="http://appdata.hungryapp.co.kr/images/main1404/rb/rb_gift_tt.jpg" width="120" height="26" /></div>
+                        <div class="rb_gift_mid">
+                                                            <div class="rb_gift_el" onclick="location.href='/shop/lottery_detail.php?idx=2367';" style="cursor:pointer;">
+                                        <img src="http://appdata.hungryapp.co.kr/shop/201811/1541145364_61848668484.jpg/hungryapp/resize/67x58"  class="rb_thumA" onerror="noimage(this)" /> 
+                                        <p class="rb_c1">닌텐도 스위치 (네온)<br  />
+                                        <span class="rb_c2">500</span><span class="rb_c3">밥알</span></p>
+                                </div>        
+                                                            <div class="rb_gift_el" onclick="location.href='/shop/lottery_detail.php?idx=2368';" style="cursor:pointer;">
+                                        <img src="http://appdata.hungryapp.co.kr/shop/201906/1560498135_87418484484.jpg/hungryapp/resize/67x58"  class="rb_thumA" onerror="noimage(this)" /> 
+                                        <p class="rb_c1">알파스캔 AOC 24B1 시력보호 무결점 모니터<br  />
+                                        <span class="rb_c2">200</span><span class="rb_c3">밥알</span></p>
+                                </div>        
+                                                            <div class="rb_gift_el" onclick="location.href='/shop/lottery_detail.php?idx=2370';" style="cursor:pointer;">
+                                        <img src="http://appdata.hungryapp.co.kr/shop/201906/1560498119_41551115.jpg/hungryapp/resize/67x58"  class="rb_thumA" onerror="noimage(this)" /> 
+                                        <p class="rb_c1">로모스 퀵차지3.0 보조배터리 30000mAh<br  />
+                                        <span class="rb_c2">100</span><span class="rb_c3">밥알</span></p>
+                                </div>        
+                                                            <div class="rb_gift_el" onclick="location.href='/shop/lottery_detail.php?idx=2369';" style="cursor:pointer;">
+                                        <img src="http://appdata.hungryapp.co.kr/shop/201906/1560499035_54144545454.jpg/hungryapp/resize/67x58"  class="rb_thumA" onerror="noimage(this)" /> 
+                                        <p class="rb_c1">욜로 4세대 블루투스 삼각대 셀카봉 WT800<br  />
+                                        <span class="rb_c2">100</span><span class="rb_c3">밥알</span></p>
+                                </div>        
+                                                            
+                        </div>
+                        <div class="rb_shop_tt" style="margin-top:5px;"><img src="http://appdata.hungryapp.co.kr/images/main1404/rb/rb_shop_tt.jpg" width="120" height="26" /></div>
+                        <div class="rb_shop_mid" >
+                                                            <div class="rb_shop_el" onclick="location.href='/shop/shopping_detail.php?idx=5186';" style="cursor:pointer;">
+                                        <img src="http://appdata.hungryapp.co.kr/shop/201801/1516933357_10000.png/hungryapp/resize/67x58"   class="rb_thumA" onerror="noimage(this)"/> 
+                                        <p class="rb_c1">구글 플레이 기프트카드 10,000원<br  />
+                                        <span class="rb_c2">11,000</span><span class="rb_c3">밥알</span></p>
+                                </div>        
+                                                            <div class="rb_shop_el" onclick="location.href='/shop/shopping_detail.php?idx=5183';" style="cursor:pointer;">
+                                        <img src="http://appdata.hungryapp.co.kr/shop/201711/1509690571_861186.jpg/hungryapp/resize/67x58"   class="rb_thumA" onerror="noimage(this)"/> 
+                                        <p class="rb_c1">문화상품권 5,000원<br  />
+                                        <span class="rb_c2">5,500</span><span class="rb_c3">밥알</span></p>
+                                </div>        
+                                                            <div class="rb_shop_el" onclick="location.href='/shop/shopping_detail.php?idx=5216';" style="cursor:pointer;">
+                                        <img src="http://appdata.hungryapp.co.kr/shop/201802/1519193417_2.jpg/hungryapp/resize/67x58"   class="rb_thumA" onerror="noimage(this)"/> 
+                                        <p class="rb_c1">배스킨라빈스 파인트 아이스크림<br  />
+                                        <span class="rb_c2">7,920</span><span class="rb_c3">밥알</span></p>
+                                </div>        
+                                                            <div class="rb_shop_el" onclick="location.href='/shop/shopping_detail.php?idx=5207';" style="cursor:pointer;">
+                                        <img src="http://appdata.hungryapp.co.kr/shop/201801/1516938416_4.jpg/hungryapp/resize/67x58"   class="rb_thumA" onerror="noimage(this)"/> 
+                                        <p class="rb_c1">굽네치킨 갈비천왕+콜라1.25L<br  />
+                                        <span class="rb_c2">20,900</span><span class="rb_c3">밥알</span></p>
+                                </div>        
+                                                        
+                        </div>
+    
+    
+    
+                    <div class="rb_join_tt" style="margin-top:5px;"><img src="http://appdata.hungryapp.co.kr/images/main1404/rb/rb_join_tt.jpg" width="120" height="25" /></div>
+                    <div class="rb_join_mid">
+                                                                            <div class="rb_join_el" onclick="location.href='http://www.hungryapp.co.kr/shop/entry_view.php?idx=101492&order_state=SS&page=1';"  style="cursor:pointer;">
+                                    <div class="rb_join_thum"><img src=http://appdata.hungryapp.co.kr/shop/201801/1516933123_15000.png onError='noimage(this)' class='rb_thumB' /></div> 
+                                     <img src="http://appdata.hungryapp.co.kr/images/main1404/hasp3/icon_Hbuy.png" class="rb_iconA" />
+                                     <p class="rb_c4">아라키Si</p>
+                                     <div class="clear_both"></div>        
+                            </div>
+    
+                                                    
+                                                                            <div class="rb_join_el" onclick="location.href='http://www.hungryapp.co.kr/shop/entry_view.php?idx=101491&order_state=SS&page=1';"  style="cursor:pointer;">
+                                    <div class="rb_join_thum"><img src=http://appdata.hungryapp.co.kr/shop/201801/1516933357_10000.png onError='noimage(this)' class='rb_thumB' /></div> 
+                                     <img src="http://appdata.hungryapp.co.kr/images/main1404/hasp3/icon_Hbuy.png" class="rb_iconA" />
+                                     <p class="rb_c4">♥채린바라</p>
+                                     <div class="clear_both"></div>        
+                            </div>
+    
+                                                    
+                                                                            <div class="rb_join_el" onclick="location.href='http://www.hungryapp.co.kr/shop/entry_view.php?idx=101490&order_state=SS&page=1';"  style="cursor:pointer;">
+                                    <div class="rb_join_thum"><img src=http://appdata.hungryapp.co.kr/shop/201701/1484645321_cu_5000.jpg onError='noimage(this)' class='rb_thumB' /></div> 
+                                     <img src="http://appdata.hungryapp.co.kr/images/main1404/hasp3/icon_Hbuy.png" class="rb_iconA" />
+                                     <p class="rb_c4">Sadan</p>
+                                     <div class="clear_both"></div>        
+                            </div>
+    
+                                                    
+                                                                            <div class="rb_join_el" onclick="location.href='http://www.hungryapp.co.kr/shop/entry_view.php?idx=101489&order_state=SS&page=1';"  style="cursor:pointer;">
+                                    <div class="rb_join_thum"><img src=http://appdata.hungryapp.co.kr/shop/201701/1484645321_cu_5000.jpg onError='noimage(this)' class='rb_thumB' /></div> 
+                                     <img src="http://appdata.hungryapp.co.kr/images/main1404/hasp3/icon_Hbuy.png" class="rb_iconA" />
+                                     <p class="rb_c4">Sadan</p>
+                                     <div class="clear_both"></div>        
+                            </div>
+    
+                                                    
+                                                                            <div class="rb_join_el" onclick="location.href='http://www.hungryapp.co.kr/shop/entry_view.php?idx=101488&order_state=SS&page=1';"  style="cursor:pointer;">
+                                    <div class="rb_join_thum"><img src=http://appdata.hungryapp.co.kr/shop/201805/1526607959_1519193278_1.jpg onError='noimage(this)' class='rb_thumB' /></div> 
+                                     <img src="http://appdata.hungryapp.co.kr/images/main1404/hasp3/icon_Hbuy.png" class="rb_iconA" />
+                                     <p class="rb_c4">로젠하인츠</p>
+                                     <div class="clear_both"></div>        
+                            </div>
+    
+                                                    
+                                                                            <div class="rb_join_el" onclick="location.href='http://www.hungryapp.co.kr/shop/entry_view.php?idx=18919&order_state=LS&page=1';" style="cursor:pointer;">
+                                    <div class="rb_join_thum"><img src=http://appdata.hungryapp.co.kr/shop/201906/1560843932_016816168.jpg onError='noimage(this)' class='rb_thumB' /></div> 
+                                     <img src="http://appdata.hungryapp.co.kr/images/main1404/hasp3/icon_Hget.png" class="rb_iconA" />
+                                     <p class="rb_c4">kdh05</p>
+                                     <div class="clear_both"></div>        
+                            </div>
+                                                    
+                                                                            <div class="rb_join_el" onclick="location.href='http://www.hungryapp.co.kr/shop/entry_view.php?idx=18912&order_state=LS&page=1';" style="cursor:pointer;">
+                                    <div class="rb_join_thum"><img src=http://appdata.hungryapp.co.kr/shop/201903/1553586793_746146.JPG onError='noimage(this)' class='rb_thumB' /></div> 
+                                     <img src="http://appdata.hungryapp.co.kr/images/main1404/hasp3/icon_Hget.png" class="rb_iconA" />
+                                     <p class="rb_c4">곰저녁밥크</p>
+                                     <div class="clear_both"></div>        
+                            </div>
+                                                    
+                                                
+                </div>
+                
+                
+                </div>
+        <!--E : 쇼핑 , 경품 상품-->
+    
+    </div>
+    <!-- E : Quick Contents -->
+    
+<script>
+    $(document).ready(function()
+    {
+        setTimeout(function()
+        {
+            document.bannerFrm.target = "ifrmUpload";
+            document.bannerFrm.action = "/banner/banner_expose.php";
+            document.bannerFrm.submit();
+        },1000);
+
+        var newitem = "";
+
+                        newitem	= "<input type='hidden' name='uid[]' value='12164'>";
+            $('#bannerFrm', parent.document).append(newitem);
+        
+        newitem	= "<input type='hidden' name='suid[]' value='1561'>";
+        $('#bannerFrm', parent.document).append(newitem);
+    });
+</script>
+<iframe name="ifrmUpload" id="ifrmUpload" style="width:0; height:0;" frameborder="0"></iframe>
+                </div>
+                <!-- 퀵메뉴 끝 -->

@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block contents %}
+	<!-- Start top-section Area -->
+	<section class="banner-area relative">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row justify-content-lg-end align-items-center banner-content">
+				<div class="col-lg-6">
+					<h1 class="text-white">E-Sports Reservation</h1>
+					<p>PC방을 대관해보세요!</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End top-section Area -->
+
+	<!-- Start Align Area -->
+	<style>
+		.text-white {
+			font-family: 'yg-jalnan';
+		}
+		.container {font-family: 'Noto Sans KR', sans-serif;}
+		p {
+			font-family: 'Hanna';
+			letter-spacing: 3px;
+		}
+	</style>
+	<section class="whole-wrap">
+		<div class="container">
+			<div class="section-top-border">
+				<div class="row">
+					<div class="col-lg-8 col-md-8">
+						<h3 class="mb-30">PC방 대관 예약</h3>
+						<form action="{% url 'createReservation' %}" method="POST">
+						{% csrf_token %}
+							<div class="form-group">
+								<label for="formGroupExampleInput">대표자 성함</label>
+								<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" name="representName">
+							  </div>
+							<div class="form-group">
+									<label for="formGroupExampleInput">단체명</label>
+									<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Group Name" name="groupName">
+							</div>
+							<div class="form-row align-items-center">
+								<div class="col-auto my-1"> 	
+									<label for="formGroupExampleInput">인원수</label>
+									<div class="row"><input type="text" name="peopleNumber" class="form-control col" style="margin-left: 15px; width: 180px" id="formGroupExampleInput" placeholder="관전자를 포함한 인원수" word-break="nowrap"><span style="margin-top: 5px;" class="col">명</span></div>
+								</div>
+							</div>
+							<br>
+							<div class="form-row align-items-center"> 
+									<div class="col-auto my-1">
+									  <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">PC방 선택</label>
+									  <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="pcroom">
+										<option selected>PC방 선택</option>
+										<option value="1">A PC방</option>
+										<option value="2">B PC방</option>
+										<option value="3">C PC방</option>
+										<option value="4">D PC방</option>
+										<option value="5">E PC방</option>
+										<option value="6">F PC방</option>
+										<option value="7">G PC방</option>
+										<option value="8">H PC방</option>
+										<option value="9">I PC방</option>
+										<option value="10">J PC방</option>
+									  </select>
+									</div>
+							</div>				
+							<label for="start">시작 날짜: </label>
+                            <input type="date" id="start" name="startDay" value="2019-06-30" min="2019-01-01" max="2020-12-31">
+							<label for="appt">시작 시간:  </label>
+							<input type="time" id="appt" name="startTime" min="00:00" max="24:00" required>
+							<br>
+							<label for="start">종료 날짜: </label>
+                            <input type="date" id="start" name="endDay" value="2019-06-30" min="2019-01-01" max="2020-12-31">
+		                    <label for="appt"> ~ 종료 시간:  </label>
+							<input type="time" id="appt" name="endTime" min="00:00" max="24:00" required>
+							<div class="form-row align-items-center">
+								<div class="col-auto my-1"> 	
+									<label for="formGroupExampleInput">대표 연락처</label>
+									<input type="text" class="form-control" id="formGroupExampleInput" placeholder="010-XXXX-XXXX" name="representContact">
+								</div>
+							</div>  
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email 주소</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ID@example.com" name="email">
+								<small id="emailHelp" class="form-text text-muted">대표자 Email을 작성해주세요.</small>
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">비밀번호</label>
+								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+							</div>
+							<div class="form-group form-check">
+									<input type="checkbox" class="form-check-input" id="exampleCheck1" name="sponsor"  value="협찬">
+									<label class="form-check-label" for="exampleCheck1">협찬을 받고 있는 동아리라면 체크해주세요!</label>
+								</div> 
+							<br>
+							<!-- Trigger/Open The Modal -->
+
+							<!-- <button type="submit" id="myBtn" class="btn btn-primary" onclick="location.href='{% url 'index' %}'">제출</button> -->
+						    <button type="submit" id="myBtn" class="btn btn-primary" >제출</button>
+							<!-- The Modal -->	<!--onclick="location.href='/'"-->
+							<div id="myModal" class="modal">
+						
+							<!-- Modal content -->
+							<div class="modal-content">
+								<span class="close">&times;</span>                                                               
+								<p>정상적으로 예약되었습니다.</p>
+							</div></div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Align Area -->
+
+	{% endblock %}

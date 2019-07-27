@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block contents %}
+	<!--================ start banner Area =================-->
+	<style>
+		.text-white {font-family: 'yg-jalnan';}
+		.detail-view-wrapper .left {font-family: 'DOSMyungjo';}
+		h4 {font-family: 'Hanna';}
+		p {
+			font-family: 'Hanna';
+			letter-spacing: 3px;
+	}
+	</style>
+	<section class="banner-area relative">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row justify-content-lg-end align-items-center banner-content">
+				<div class="col-lg-6">
+					<h1 class="text-white">ㅈㄹㅇ</h1>
+					<p>신촌 PC방의 잔여좌석을 확인하거나 대관을 할 수 있는 서비스입니다</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End banner Area =================-->
+	<div class="detail-view">
+		<div class="detail-view-wrapper">
+			<div class="left">
+				<div style="margin-left: 10px">
+				<br>
+				<h4>{{pcroom.name}}</h4>
+				<br>
+				<br>
+				요금제: {{pcroom.cost}} 원
+				<br>
+				<br>
+				컴퓨터 상세 스펙: {{pcroom.spec}}
+				<br>
+				<br>
+				현재 인원 / 총원
+				<br>
+				{{pcroom.peopleNumber}} 명  /  {{pcroom.maxPeopleNumber}} 명
+				<br>
+				<br>
+				{{pcroom.misc}}
+				</div>
+			</div>
+			<div class="right">
+				<div class="row">
+					{% for seat in seatsUp%}
+						{% if  seat.accupied == True %}
+						<div class="seat" style="background-color:black">
+						</div>
+						{% else %}
+						<div class="seat unoccupied">
+						</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+				<div class="row">
+					좌 석 현 황
+				</div>
+				<div class="row">
+					{% for seat in seatsDown%}
+						{% if  seat.accupied == True %}
+						<div class="seat" style="background-color:black">
+						</div>
+						{% else %}
+						<div class="seat unoccupied">
+						</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+    </div>
+
+
+{% endblock %}

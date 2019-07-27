@@ -1,0 +1,5 @@
+.floating1 { position: fixed; right: 50%; top: 180px; margin-right: -720px; text-align:center; width: 120px; 
+            margin-top: 100px; border: 1px solid #bcbcbc; background-color: white;}
+
+.floating2 { position: fixed; left: 50%; top: 180px; margin-left: -720px; text-align:center; width: 120px; 
+    margin-top: 100px; border: 1px solid #bcbcbc; background-color: white;}

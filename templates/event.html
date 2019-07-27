@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% block contents %}
+
+	<!--================ start banner Area =================-->
+	<section class="banner-area relative">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row justify-content-lg-end align-items-center banner-content">
+				<div class="col-lg-5">
+					<h1 class="text-white">E-Sports Event</h1>
+					<p>당신의 실력을 뽐내보세요!</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End banner Area =================-->
+
+	<!--================ Start Upcoming Event Area =================-->
+	<style>
+		.text-white {font-family: 'yg-jalnan';}
+		.title {font-family: 'Noto Sans KR', sans-serif;}
+		.single_time {font-family: 'Noto Sans KR', sans-serif;}
+		p {
+			font-family: 'Hanna';
+			letter-spacing: 3px;
+		}
+		h2 {
+			font-family: 'yg-jalnan';
+			letter-spacing: 3px;
+		}
+	</style>
+	<section class="upcoming_event_area section-gap-top">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-6">
+					<div class="section-title">
+						<h2><span>Upcoming</span> Event</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="single_upcoming_event">
+						<div class="row event-items">
+							<div class="col-lg-6 col-md-6">
+								<figure>
+									<img class="img-fluid w-100" src="/static/img/game_arena.png" alt="">
+									<div class="date">
+										8월 3일
+									</div>
+								</figure>
+							</div>
+							<div class="col-lg-6 col-md-6">
+								<div class="content_wrapper">
+									<h3 class="title">
+										<a href="{% url 'event_details' %}">비공식 연고전 : 롤드컵</a>
+									</h3>
+									<div class="count_time justify-content-lg-start justify-content-center" id="clockdiv1">
+										<div class="single_time" style="margin-top:1px">
+											<p>종목</p>
+											<h6>리그오브레전드</h6>
+										</div>
+										<div class="single_time">
+											<p>모집기간</p>
+											<h6>7.10~7.15</h6>
+										</div>
+										<div class="single_time">
+											<p>장소</p>
+											<h6>신촌 인터라켄</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="single_upcoming_event">
+						<div class="row event-items">
+							<div class="col-lg-6 col-md-6">
+								<figure>
+									<img class="img-fluid w-100" src="/static/img/game_arena.png" alt="">
+									<div class="date">
+										8월 10일
+									</div>
+								</figure>
+							</div>
+							<div class="col-lg-6 col-md-6">
+								<div class="content_wrapper">
+										<h3 class="title">
+											<a href="{% url 'event_details' %}">KLASS배 배그 정기 대회</a>
+										</h3>
+									<div class="count_time justify-content-lg-start justify-content-center" id="clockdiv1">
+										<div class="single_time">
+											<p>종목</p>
+											<h6>배틀그라운드</h6>
+										</div>
+										<div class="single_time">
+											<p>모집기간</p>
+											<h6>7.20~7.23</h6>
+										</div>
+										<div class="single_time">
+											<p>장소</p>
+											<h6>신촌 인터라켄</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="single_upcoming_event">
+						<div class="row event-items">
+							<div class="col-lg-6 col-md-6">
+								<figure>
+									<img class="img-fluid w-100" src="/static/img/game_arena.png" alt="">
+									<div class="date">
+										8월 23일
+									</div>
+								</figure>
+							</div>
+							<div class="col-lg-6 col-md-6">
+								<div class="content_wrapper">
+									<h3 class="title">
+										<a href="{% url 'event_details' %}">서강대 공대배 오버워치</a>
+									</h3>
+									<div class="count_time justify-content-lg-start justify-content-center" id="clockdiv1">
+										<div class="single_time">
+											<p>종목</p>
+											<h6>오버워치</h6>
+										</div>
+										<div class="single_time">
+											<p>모집기간</p>
+											<h6>8.10~8.15</h6>
+										</div>
+										<div class="single_time">
+											<p>장소</p>
+											<h6>독수리 PC방</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="single_upcoming_event">
+						<div class="row event-items">
+							<div class="col-lg-6 col-md-6">
+								<figure>
+									<img class="img-fluid w-100" src="/static/img/game_arena.png" alt="">
+									<div class="date">
+										8월 23일
+									</div>
+								</figure>
+							</div>
+							<div class="col-lg-6 col-md-6">
+								<div class="content_wrapper">
+									<h3 class="title">
+										<a href="{% url 'event_details' %}">비공식 연고전 : 롤드컵</a>
+									</h3>
+									<div class="count_time justify-content-lg-start justify-content-center" id="clockdiv1">
+										<div class="single_time">
+											<p>종목</p>
+											<h6>리그오브레전드</h6>
+										</div>
+										<div class="single_time">
+											<p>모집기간</p>
+											<h6>8.20~8.22</h6>
+										</div>
+										<div class="single_time">
+											<p>장소</p>
+											<h6>롤롤 신촌점</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Upcoming Event Area =================-->	
+{% endblock %}
